@@ -1,7 +1,7 @@
-TKDIS linUX UTILS
+TKDIS BASH UTILS
 =================
 
-Small bash utilities for handling TKDIS format that ebank (at least in Slovenia still use the most).
+Small bash utilities for handling TKDIS format that e-banks (at least here in Slovenia) still use the most.
 
 Commands
 --------
@@ -25,19 +25,19 @@ Few examples
 
 count payments by companies (alphabetically sorted)
 
-	cat sample.txt | ./tkdis2tsv short | ./income | ./amount-more 8 | ./amount-less 50 | ./sort-by-company | cut -f 19 | uniq -c
+	cat sample.tkdis | ./tkdis2tsv short | ./income | ./amount-more 8 | ./amount-less 50 | ./sort-by-company | cut -f 19 | uniq -c
 
 
 using additional command to sum / count p
 	
-	cat sample.txt | ./tkdis2tsv short | ./income | ./amount-more 8 | ./amount-less 50 | ./sum-amounts
+	cat sample.tkdis | ./tkdis2tsv short | ./income | ./amount-more 8 | ./amount-less 50 | ./sum-amounts
 
 Output:
 
 	1      9.8	       MOJE PODJETJE DOO
-        1      9.8	       AGENCIJA JUG TIMOTEJ BAN S.P.
-        2      58.8	       METELKO ROBERTA S.P.
-        1      9.8	       ZETA VARNOST IN ZASCITA DOO
+	1      9.8	       AGENCIJA JUG TIMOTEJ BAN S.P.
+	2      58.8	       METELKO ROBERTA S.P.
+	1      9.8	       ZETA VARNOST IN ZASCITA DOO
 	SUM:   5502.2
 
 get sums of all income invoices between 2 prices
