@@ -35,9 +35,9 @@ using additional command to sum / count p
 Output:
 
 	1      9.8	       MOJE PODJETJE DOO
-        1      9.8	       AGENCIJA JUG TIMOTEJ BAN S.P.
-        2      58.8	       METELKO ROBERTA S.P.
-        1      9.8	       ZETA VARNOST IN ZASCITA DOO
+	1      9.8	       AGENCIJA JUG TIMOTEJ BAN S.P.
+	2      58.8	       METELKO ROBERTA S.P.
+	1      9.8	       ZETA VARNOST IN ZASCITA DOO
 	SUM:   5502.2
 
 get sums of all income invoices between 2 prices
