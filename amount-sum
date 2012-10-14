@@ -1,0 +1,9 @@
+#!/bin/bash
+
+LIM=$1
+
+./sort-by-company | awk -F"\t" -v limit=$LIM -v OFS='\t' '
+    BEGIN { sum = 0; count = 0; name= ""; sumall=0; countall=0 }
+    { if (name != $7 && countall > 0) { print "\t", count, sum, limit == "ext" ? "" : name ; if (limit == "ext"){print ""}; name = $7; sum = 0; count = 0;  }  sumall += $4; sum += $4 ; count += 1; countall += 1; if (limit == "ext") { print };  }
+    END { print "\tALL:", countall, sumall }
+'

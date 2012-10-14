@@ -1,0 +1,5 @@
+#!/bin/bash
+
+awk '
+    { if ($2 == "20") print }
+'

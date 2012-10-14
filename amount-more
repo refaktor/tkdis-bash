@@ -1,0 +1,7 @@
+#!/bin/bash
+
+LIM=$1
+
+awk -v limit=$LIM '
+    { if ($4 > limit) print }
+'

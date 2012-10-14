@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sort -k 7 -t "	"

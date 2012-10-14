@@ -1,0 +1,9 @@
+#!/bin/bash
+
+LIM=$1
+
+awk -v limit=$LIM '
+    BEGIN { sum = 0 }
+    { sum += $4 ; print  }
+    END { print "SUM:" sum }
+'

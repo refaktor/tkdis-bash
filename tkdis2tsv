@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [[ $1 == "short" ]]; then
+    
+    grep -v ^[[:space:]] | awk -v FIELDWIDTHS='18 2 8 2 35 1 6 18 15 1 1 2 2 2 22 2 22 36 10 35 22 19 2' -v OFS='\t' '
+    BEGIN {print "racun_komitenta","vr","datum   ","znesek ","sklic      ","kraj         ","naziv"}
+    { $1=$1 ""; print tr($1),tr($2),tr($3),int($9)/100,tr($17),tr($19),tr($20) }
+function ltr(s) { gsub(/^ +/, "", s); return s }
+function rtr(s) { gsub(/ +$/, "", s); return s }
+function tr(s)  { return rtr(ltr(s)); }
+' | tr "" " " 
+
+else
+    
+    grep -v ^[[:space:]] | awk -v FIELDWIDTHS='18 2 8 2 35 1 6 18 15 1 1 2 2 2 22 2 22 36 10 35 22 19 2' -v OFS='\t' '
+    BEGIN {print "racun_komitenta","vr","datum_ob","st","i","placil","rac_kom","znesek"," ","v","si","sp","mo","sklico","md","sklicd","name","kraj_partnerj","naziv_partn","st_za_reklamacijo","racun_prejemnik",""}
+    { $1=$1 ""; print tr($1),tr($2),tr($3),tr($4),tr($6),tr($7),tr($8),tr($9),tr($10),tr($11),tr($12),tr($13),tr($14),tr($15),tr($16),tr($17),tr($18),tr($19),tr($20),tr($21),tr($22),tr($23),tr($24),tr($25) }
+function ltr(s) { gsub(/^ +/, "", s); return s }
+function rtr(s) { gsub(/ +$/, "", s); return s }
+function tr(s)  { return rtr(ltr(s)); }
+' | tr "" " " 
+
+fi
