@@ -1,7 +1,7 @@
 TKDIS linUX UTILS
 =================
 
-Small bash utilities for handling TKDIS format that e-bank (at least here in Slovenia) still use the most.
+Small bash utilities for handling TKDIS format that e-banks (at least here in Slovenia) still use the most.
 
 Commands
 --------
