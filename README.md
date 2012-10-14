@@ -25,12 +25,12 @@ Few examples
 
 count payments by companies (alphabetically sorted)
 
-	cat sample.txt | ./tkdis2tsv short | ./income | ./amount-more 8 | ./amount-less 50 | ./sort-by-company | cut -f 19 | uniq -c
+	cat sample.tkdis | ./tkdis2tsv short | ./income | ./amount-more 8 | ./amount-less 50 | ./sort-by-company | cut -f 19 | uniq -c
 
 
 using additional command to sum / count p
 	
-	cat sample.txt | ./tkdis2tsv short | ./income | ./amount-more 8 | ./amount-less 50 | ./sum-amounts
+	cat sample.tkdis | ./tkdis2tsv short | ./income | ./amount-more 8 | ./amount-less 50 | ./sum-amounts
 
 Output:
 
