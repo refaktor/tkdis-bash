@@ -11,10 +11,10 @@ Commands
 
 	income - filter just income
 
-	amount-more X - pass thru items with amount more than X
-	amount-less Y - pass thru items with amount less than Y
+	amount-more X - pass thru transactions with amount more than X
+	amount-less Y - pass thru transactions with amount less than Y
 
-	sort-by-compny - as named
+	sort-by-company - as named
 
 	sum-amounts - sum amounts by company
 	sum-amounts ext - sum amounts by grouping and showing transactions and summing them
@@ -28,7 +28,7 @@ count payments by companies (alphabetically sorted)
 	cat sample.tkdis | ./tkdis2tsv short | ./income | ./amount-more 8 | ./amount-less 50 | ./sort-by-company | cut -f 19 | uniq -c
 
 
-using additional command to sum / count p
+using additional command to sum / count transactions
 	
 	cat sample.tkdis | ./tkdis2tsv short | ./income | ./amount-more 8 | ./amount-less 50 | ./sum-amounts
 
