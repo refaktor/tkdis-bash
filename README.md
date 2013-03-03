@@ -61,3 +61,5 @@ Output:
 # open TSV file with libreoffice
 
 	libreoffice --calc sums.tsv &
+
+# this will be also usefull to import bank data in http://www.cebelca.biz
