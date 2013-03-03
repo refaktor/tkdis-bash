@@ -62,4 +62,4 @@ Output:
 
 	libreoffice --calc sums.tsv &
 
-# this will be also usefull to import bank data in http://www.cebelca.biz
+this will be also usefull to import bank data in http://www.cebelca.biz
